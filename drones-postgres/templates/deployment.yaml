@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drones-postgres-deployment
+  labels:
+    app: drones-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drones-postgres
+  template:
+    metadata:
+      labels:
+        app: drones-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: "postgres:15.3"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: POSTGRES_USER
+              value: "user"
+            - name: POSTGRES_PASSWORD
+              value: "password"
+            - name: POSTGRES_DB
+              value: "dronesdb"
+          ports:
+            - containerPort: 5432

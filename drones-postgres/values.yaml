@@ -1,0 +1,12 @@
+replicaCount: 1
+image:
+  repository: postgres
+  tag: "15.3"
+  pullPolicy: IfNotPresent
+postgres:
+  username: user
+  password: password
+  database: dronesdb
+service:
+  type: ClusterIP
+  port: 5432

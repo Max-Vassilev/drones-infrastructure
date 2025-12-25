@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: drones-postgres-service
+  labels:
+    app: drones-postgres
+spec:
+  type: ClusterIP
+  selector:
+    app: drones-postgres
+  ports:
+    - port: 5432
+      targetPort: 5432
