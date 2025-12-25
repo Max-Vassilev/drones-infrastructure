@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drones-backend-deployment
+  labels:
+    app: drones-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drones-backend
+  template:
+    metadata:
+      labels:
+        app: drones-backend
+    spec:
+      containers:
+        - name: drones-backend
+          image: "ghcr.io/max-vassilev/drones-backend:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
