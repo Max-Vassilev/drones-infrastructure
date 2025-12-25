@@ -4,9 +4,9 @@ image:
   tag: "15.3"
   pullPolicy: IfNotPresent
 postgres:
-  username: user
-  password: password
-  database: dronesdb
+  username: drones_user
+  password: drones_password
+  database: drones_db
 service:
   type: ClusterIP
   port: 5432

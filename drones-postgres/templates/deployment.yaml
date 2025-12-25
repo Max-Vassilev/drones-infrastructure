@@ -20,10 +20,10 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: POSTGRES_USER
-              value: "user"
+              value: "drones_user"
             - name: POSTGRES_PASSWORD
-              value: "password"
+              value: "drones_password"
             - name: POSTGRES_DB
-              value: "dronesdb"
+              value: "drones_db"
           ports:
             - containerPort: 5432
