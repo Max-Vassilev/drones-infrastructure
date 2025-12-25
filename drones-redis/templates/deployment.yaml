@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drones-redis-deployment
+  labels:
+    app: drones-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drones-redis
+  template:
+    metadata:
+      labels:
+        app: drones-redis
+    spec:
+      containers:
+        - name: redis
+          image: "redis:7.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 6379
