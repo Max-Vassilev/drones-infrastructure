@@ -1,4 +1,4 @@
-appName: drones-frontend
+appName: drones-backend
 port: 5001
 
 image:
