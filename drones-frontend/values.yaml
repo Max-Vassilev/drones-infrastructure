@@ -3,4 +3,4 @@ port: 5173
 
 image:
   name: ghcr.io/max-vassilev/drones-frontend
-  tag: "25"
+  tag: "latest"
