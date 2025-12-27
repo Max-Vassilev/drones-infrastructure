@@ -1,13 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: drones-backend-service
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: drones-backend
+    app: {{ .Values.appName }}
 spec:
-  type: ClusterIP
-  selector:
-    app: drones-backend
+  type: NodePort
   ports:
-    - port: 5001
-      targetPort: 5001
+    - port: {{ .Values.port }}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ .Values.appName }}
+    tier: backend
