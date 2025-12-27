@@ -1,8 +1,0 @@
-replicaCount: 1
-image:
-  repository: ghcr.io/max-vassilev/drones-frontend
-  tag: "23"
-  pullPolicy: Always
-service:
-  type: ClusterIP
-  port: 5173

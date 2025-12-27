@@ -1,5 +1,0 @@
-apiVersion: v2
-name: drones-frontend
-description: Helm chart for Drones Frontend
-version: 0.1.0
-appVersion: "1.0.0"
