@@ -1,6 +1,6 @@
 appName: drones-frontend
 port: 5173
-namespace: default
+namespace: {{ .Values.namespace }}
 
 image:
   name: ghcr.io/max-vassilev/drones-frontend
