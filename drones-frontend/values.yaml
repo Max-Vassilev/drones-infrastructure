@@ -1,0 +1,12 @@
+appName: drones-frontend
+port: 5173
+namespace: default
+
+configmap:
+  name: drones-frontend-configmap-v1
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+
+image:
+  name: ghcr.io/max-vassilev/drones-frontend
+  tag: "23"
