@@ -2,5 +2,5 @@ appName: drones-postgres
 port: 5432
 
 image:
-  name: redis
+  name: postgres
   tag: "latest"
