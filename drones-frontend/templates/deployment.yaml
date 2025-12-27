@@ -5,7 +5,7 @@ metadata:
   labels:
     app: drones-frontend
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: drones-frontend
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: drones-frontend
-          image: "ghcr.io/max-vassilev/drones-frontend:latest"
-          imagePullPolicy: IfNotPresent
+          image: "{{ .Values.image.repository }}"
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
           ports:
             - containerPort: 5173
