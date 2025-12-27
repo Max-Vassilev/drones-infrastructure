@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: drones-redis-deployment
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: drones-redis
+    app: {{ .Values.appName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: drones-redis
+      app: {{ .Values.appName }}
+      tier: redis
   template:
     metadata:
       labels:
-        app: drones-redis
+        app: {{ .Values.appName }}
+        tier: redis
     spec:
       containers:
-        - name: redis
-          image: "redis:7.0"
-          imagePullPolicy: IfNotPresent
+        - name: {{ .Values.appName }}
+          image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: 6379
+            - containerPort: {{ .Values.port }}
