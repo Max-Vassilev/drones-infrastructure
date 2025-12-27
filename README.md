@@ -1,3 +1,6 @@
+https://github.com/Max-Vassilev/drones-backend
+
+https://github.com/Max-Vassilev/drones-frontend
 
 <img width="1500" height="1000" alt="Screenshot from 2025-12-27 16-09-52" src="https://github.com/user-attachments/assets/2948e600-affa-4650-9273-8963ae2fb1c0" />
 
