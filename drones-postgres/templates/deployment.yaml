@@ -22,3 +22,10 @@ spec:
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.port }}
+          env:
+            - name: POSTGRES_USER
+              value: {{ .Values.env.POSTGRES_USER }}
+            - name: POSTGRES_PASSWORD
+              value: {{ .Values.env.POSTGRES_PASSWORD }}
+            - name: POSTGRES_DB
+              value: {{ .Values.env.POSTGRES_DB }}

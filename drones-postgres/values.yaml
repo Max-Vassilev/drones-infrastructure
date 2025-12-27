@@ -4,3 +4,8 @@ port: 5432
 image:
   name: postgres
   tag: "latest"
+
+env:
+  POSTGRES_USER: drones_user
+  POSTGRES_PASSWORD: drones_password
+  POSTGRES_DB: drones_db
