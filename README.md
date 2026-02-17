@@ -4,7 +4,8 @@
 
 <img width="1500" height="1000" alt="Screenshot from 2025-12-27 16-05-14" src="https://github.com/user-attachments/assets/35ba3123-97e6-407f-9452-702d345899da" />
 
-** Backend repo **
+## Backend repo ##
 https://github.com/Max-Vassilev/drones-backend
 
+## Frontend repo ##
 https://github.com/Max-Vassilev/drones-frontend
